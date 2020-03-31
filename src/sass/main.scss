@@ -1,0 +1,24 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import './vars.scss';
+@import './normalize.scss';
+@import './base.scss';
+
+// Utils
+
+@import './utils/list.scss';
+@import './utils/typografy.scss';
+@import './utils/container.scss';
+@import './utils/visually-hidden.scss';
+@import './utils/button.scss';
+
+// components
+
+@import './components/about-us.scss';
+@import './components/types-of-learning.scss';
+@import './components/how-we-teach.scss';
+@import './components/learning-structure.scss';
+@import './components/footer.scss';
+@import './components/header.scss';

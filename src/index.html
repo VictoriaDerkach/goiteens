@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project group1</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Ubuntu&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+    <!-- Сюда будет всталена ссылка на файл стилей -->
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+
+  <body>
+    <!-- Header Саша-->
+    //= html/header.html
+
+    <!-- About us  Вика-->
+    //= html/about-us.html
+    <!-- Types of learning Сергей-->
+    //= html/types-of-learning.html
+    <!-- How we teach Дима-->
+    //= html/how-we-teach.html
+    <!-- Learning structure Миша-->
+    //= html/learning-structure.html
+    <!-- Footer Дима-->
+    //= html/footer.html
+
+    <!-- Сюда будет всталена ссылка на файл скриптов -->
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <script>
+      document.getElementById('menu-btn').addEventListener('click', active);
+
+      function active() {
+        document
+          .getElementById('menu-btn')
+          .classList.toggle('menu-btn__active');
+      }
+
+      document.getElementById('menu-btn').addEventListener('click', openMenu);
+
+      function openMenu() {
+        document
+          .getElementById('hover-wrapper')
+          .classList.toggle('hover-wrapper--visible');
+      }
+
+      const navScroll = document.getElementById('navigation');
+      const menuBlack = document.getElementById('menu-btn');
+
+      window.onscroll = function() {
+        if (window.pageYOffset > 1) {
+          navScroll.classList.add('navigation--scroll');
+          menuBlack.classList.add('menu-btn--black');
+        } else {
+          navScroll.classList.remove('navigation--scroll');
+          menuBlack.classList.remove('menu-btn--black');
+        }
+      };
+    </script>
+  </body>
+</html>
